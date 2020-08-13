@@ -1,0 +1,157 @@
+//  Carousel Styling
+$container-height: 60vh;
+$container-width: 80%;
+$container-blur-width: 40%;
+
+.popular-trips {
+	position: relative;
+	h3 {
+		margin: 0.5rem;
+	}
+	#extrip {
+		position: absolute;
+		right: 2%;
+		top: 0.5rem;
+		color: black;
+		i {
+			margin: 0 0.5rem;
+		}
+	}
+
+	// buttons
+
+	.cards-btn-right {
+		right: 5%;
+		top: 50%;
+	}
+	.cards-btn-left {
+		left: 5%;
+		top: 50%;
+	}
+	.nav-arrow {
+		opacity: 0.95;
+	}
+
+	// defining card carousel dimensions
+
+	height: $container-height;
+	width: $container-width;
+	margin: auto;
+	overflow: hidden;
+
+	.cards {
+		display: flex;
+		height: 80%;
+		width: 300%;
+
+		.card {
+			border-radius: 5px;
+			width: 19em;
+			height: 95%;
+			padding: 0 0.6rem;
+
+			&.first-card {
+				background: darken($primary, 7);
+				width: 15em;
+			}
+			.price {
+				margin: 1rem;
+				font-size: 1rem;
+			}
+			img {
+				cursor: pointer;
+				border-radius: 5px;
+				object-fit: cover;
+				width: 100%;
+				height: 60%;
+			}
+
+			// Rating and favorite section
+
+			.rating {
+				position: relative;
+				i {
+					position: absolute;
+					font-size: 1.2rem;
+					right: 0;
+					top: 0;
+					margin: 0.3rem 0.8rem;
+					color: #555;
+					&:hover {
+						@include trans;
+						cursor: pointer;
+						color: red;
+					}
+					&.fav {
+						color: red;
+					}
+				}
+				h6 {
+					cursor: pointer;
+					margin: 0.2rem;
+					font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+					font-size: 1.2rem;
+					font-weight: 600;
+				}
+				p {
+					margin: 0.5rem;
+					font-family: sans-serif;
+					font-size: 0.8rem;
+				}
+				.stars {
+					margin: 0 0.5rem;
+				}
+				.fa-star {
+					color: #555;
+					&.checked {
+						color: orange;
+					}
+					&:hover {
+						@include trans;
+						cursor: pointer;
+						color: orange;
+					}
+				}
+			}
+		}
+	}
+}
+.first-card {
+	display: grid;
+	justify-content: center;
+	align-items: start;
+	.bnr {
+		background-color: darken($primary, 15);
+		cursor: pointer;
+		@include boxShadow(80);
+		justify-self: center;
+		align-self: center;
+		overflow: hidden;
+		height: 170px;
+		width: 170px;
+		border: black 1px solid;
+		border-radius: 50%;
+		h1 {
+			text-shadow: 1px 1px 10px #747474de;
+			text-shadow: -5px 13px 11px #00000027;
+			padding: 1rem;
+			text-align: center;
+		}
+	}
+	.h3 {
+		margin-top: 0rem;
+		justify-self: center;
+		align-self: end;
+	}
+	#bnr-link {
+		align-self: start;
+		justify-self: center;
+		font-size: 0.9rem;
+		color: black;
+		&:hover {
+			@include trans;
+			text-decoration: underline;
+			color: darken($primary, 50);
+		}
+	}
+}

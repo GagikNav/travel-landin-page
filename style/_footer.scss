@@ -1,0 +1,91 @@
+footer {
+	background: darken($primary, 5);
+	height: 40vh;
+	width: 100%;
+
+	.branding {
+		width: 80%;
+		margin: auto;
+		display: grid;
+		justify-items: center;
+		align-items: center;
+		grid-template-columns: 1fr 1fr 1fr;
+		.logo {
+			margin-top: 2rem;
+		}
+		.icons {
+			margin-top: 1rem;
+			display: grid;
+			grid-auto-flow: column;
+			grid-gap: 1.2rem;
+			justify-self: start;
+
+			.fa-twitter {
+				@include trans;
+				&:hover {
+					transform: scale(1.1);
+				}
+				color: #40c9ff;
+			}
+			.fa-facebook {
+				@include trans;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+				color: #424cd1;
+			}
+			.fa-youtube {
+				@include trans;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+				color: #fd0000;
+			}
+			.fa-instagram {
+				@include trans;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+				color: #dc1de2;
+			}
+		}
+	}
+	.links {
+		// separator line
+		&::before {
+			display: flex;
+			content: '';
+			margin: 1rem auto;
+			border-bottom: #333 1px solid;
+			border-top: #333 1px solid;
+			width: 80%;
+			height: 2px;
+		}
+		width: 80%;
+		margin: auto;
+		ul {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			li {
+				justify-self: center;
+				ul {
+					display: flex;
+					flex-direction: column;
+
+					li {
+						a {
+							color: black;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+li {
+	list-style-type: none;
+}
