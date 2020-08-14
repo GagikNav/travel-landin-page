@@ -110,8 +110,8 @@
 
       <form>
 
-         <div id="text1">I want to go to </div>
-         <div id="sel-location">
+         <div class="sel-location">
+            <div class="location-text">I want to go to </div>
             <select id="location" name="location" class="select-menu-style location">
                <option label="Europe" disabled=""></option>
                <option value="Austria">Austria</option>
@@ -127,9 +127,9 @@
                <option value="Italy">Italy</option>
             </select>
          </div>
-         <div id="text2">leaving in </div>
-         <div class="sel-month">
 
+         <div class="sel-month">
+            <div class="month-text">Leaving in </div>
             <select name="month" id="month" class="select-menu-style month">
                <option selected="" value="" class="">any month</option>
                <option value="0" class="">January</option>
@@ -145,20 +145,18 @@
                <option value="10" class="">November</option>
                <option value="11" class="">December</option>
             </select>
+            <div class="sel-year">
+               <select name="year" id="year" class="select-menu-style year">
+                  <option selected="" value="2020" class="">2020</option>
+                  <option value="2021" class="">2021</option>
+               </select>
+            </div>
          </div>
 
-         <div class="sel-year">
-
-            <select name="year" id="year" class="select-menu-style year">
-               <option selected="" value="2020" class="">2020</option>
-               <option value="2021" class="">2021</option>
-            </select>
-         </div>
-
-         <div id="text3"> for </div>
 
          <div class="sel-duration">
 
+            <div class="sel-text"> For </div>
             <select name="duration" id="duration" class="select-menu-style duration">
                <option selected="" value="" class="">any duration</option>
                <option value="tenOrLess" class="">10 days or less</option>
@@ -167,9 +165,9 @@
                <option value="twentyEightOrMore" class="">28 days or more
                </option>
             </select>
+            <button type="submit" class="btn-blue">Take me there</button>
          </div>
 
-         <button type="submit" class="btn-blue">Take me there</button>
       </form>
    </div>
 
@@ -317,7 +315,6 @@
          <div class="logo">
             <a href="#!"><img src="./img/logo.png" width="100px" height="100px" alt=""></a>
          </div>
-         <div></div>
          <div class="icons">
             <p>Follow us on:</p>
             <a href="https://twitter.com" target="_blank">
@@ -345,7 +342,7 @@
                   <li><a href="#">Deals</a></li>
                   <li><a href="#">All Trips</a></li>
                   <li><a href="#">Long Trips</a></li>
-                  <li><a href="#">Some link</a></li>
+                  <li><a href="#">Do something</a></li>
                </ul>
             </li>
 
@@ -355,7 +352,7 @@
                   <li><a href="#">What we do</a></li>
                   <li><a href="#">Who we are</a></li>
                   <li><a href="#">Our Team</a></li>
-                  <li><a href="#">Some link</a></li>
+                  <li><a href="#">Do something</a></li>
                </ul>
             </li>
 
@@ -363,7 +360,7 @@
                <h3>How to reach us</h3>
                <ul>
                   <li><a href="#">Contact us</a></li>
-                  <li><a href="#">Some link</a></li>
+                  <li><a href="#">Go somewhere</a></li>
                   <li>+31 555 555 5555</li>
                   <li>info@fictiontravel.com</li>
                </ul>
