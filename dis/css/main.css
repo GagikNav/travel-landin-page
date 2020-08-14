@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -37,7 +39,7 @@ nav {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  height: 15vh;
+  height: auto;
   width: 80%;
 }
 
@@ -110,11 +112,14 @@ nav ul {
   -ms-grid-row-align: center;
       align-self: center;
   list-style: none;
-  width: 15em;
+  width: 15rem;
 }
 
 nav ul li {
-  font-size: 0.85rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0 10px;
 }
 
 nav ul li a {
@@ -335,13 +340,14 @@ nav ul li a:hover {
           flex-direction: column;
 }
 
-#banner div.text h2 {
+#banner div.text h2,
+#banner div.text h1 {
   text-align: center;
   display: block;
-  margin: auto;
-  font-family: 'Permanent Marker', cursive;
+  margin: 2rem auto;
+  font-family: 'Pangolin', cursive;
   font-size: 2.5rem;
-  letter-spacing: 0px;
+  letter-spacing: 5px;
   word-spacing: -2.8px;
   color: #3a102f;
   font-weight: 400;
@@ -365,7 +371,7 @@ nav ul li a:hover {
   border-radius: 20px;
   -webkit-transition: ease-in-out 0.25s;
   transition: ease-in-out 0.25s;
-  margin: 1rem 8rem 0 0;
+  margin: 1rem auto;
 }
 
 #banner div.text div.btn-black .btn {
@@ -384,7 +390,7 @@ nav ul li a:hover {
 #banner div.text .a-link {
   color: #fff;
   font-size: 1rem;
-  margin: 1rem 8rem 0 0;
+  margin: auto;
 }
 
 #banner div.text .a-link:hover {
@@ -647,7 +653,8 @@ div.btn-right {
 }
 
 .find-trip form .sel-location .location-text {
-  font-size: 1rem;
+  font-family: 'Pangolin', cursive;
+  font-size: 1.2rem;
   margin-right: 0;
   margin-left: 3rem;
   -webkit-box-pack: end;
@@ -656,7 +663,8 @@ div.btn-right {
 }
 
 .find-trip form .sel-month .month-text {
-  font-size: 1rem;
+  font-family: 'Pangolin', cursive;
+  font-size: 1.2rem;
   margin: 0 1rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -674,7 +682,8 @@ div.btn-right {
 }
 
 .find-trip form .sel-duration .sel-text {
-  font-size: 1rem;
+  font-family: 'Pangolin', cursive;
+  font-size: 1.2rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;

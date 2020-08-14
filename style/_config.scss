@@ -14,7 +14,11 @@ $marg: 0.5rem;
 $border: solid 1px black;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+// nav bar fonts
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto:wght@300;400;700&display=swap');
+
+// Banner and find-your-trip section font
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 @mixin border {
 	border: #000 solid 1px;
@@ -93,8 +97,15 @@ $delay: 0.25s;
 // form variables
 $sel-hi: 2.5rem;
 @mixin form-font {
+	font-family: 'Pangolin', cursive;
+	font-size: 1.2rem;
+}
+
+// nav-bar variables
+@mixin nav-font {
+	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
-	// font-weight: bold;
+	font-weight: 300;
 }
 
 // media query
