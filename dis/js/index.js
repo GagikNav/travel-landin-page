@@ -1,8 +1,8 @@
 // alert('from index');
-
+const dotenv = require('dotenv').config();
 //get data from OpenWeather API Function
 //
-const ApiID = 'q9SYi9K3mCRKTrPUqFa9vvjPNW1zOJjM54E80UddPZo'; // process.env.unsplash_Api
+const ApiID = process.env['unsplash_Api'];
 const baseURL = `https://api.unsplash.com/search/collections?page=2&query=travel&client_id=${ApiID}`;
 
 async function getData(url) {
