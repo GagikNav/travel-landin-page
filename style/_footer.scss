@@ -81,6 +81,7 @@ footer {
 			li {
 				justify-self: center;
 				ul {
+					@include nav-font;
 					display: flex;
 					flex-direction: column;
 

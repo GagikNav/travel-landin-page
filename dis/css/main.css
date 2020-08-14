@@ -1029,6 +1029,9 @@ footer .links ul li {
 }
 
 footer .links ul li ul {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
