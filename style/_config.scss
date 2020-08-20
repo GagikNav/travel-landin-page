@@ -45,7 +45,7 @@ $delay: 0.25s;
 @mixin black-btn {
 	cursor: pointer;
 	display: block;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 1.4;
 	background: black;
 	margin: auto;
@@ -99,6 +99,17 @@ $sel-hi: 2.5rem;
 @mixin form-font {
 	font-family: 'Pangolin', cursive;
 	font-size: 1.2rem;
+}
+
+$lg-sel-hi: 2.1rem;
+@mixin lg-form-font {
+	font-family: 'Pangolin', cursive;
+	font-size: 1rem;
+}
+$md-sel-hi: 1.9rem;
+@mixin md-form-font {
+	font-family: 'Pangolin', cursive;
+	font-size: 0.8rem;
 }
 
 // nav-bar variables

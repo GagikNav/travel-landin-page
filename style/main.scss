@@ -68,10 +68,11 @@ body {
 		right: 47%;
 		width: 11rem;
 		height: 2rem;
+
 		&:hover {
-			@include trans;
 			text-decoration: underline;
-			color: #d3d3d3;
+			color: black;
+			@include trans;
 		}
 	}
 }
@@ -157,14 +158,12 @@ body {
 	align-items: center;
 	justify-content: center;
 	height: 40vh;
-	width: 80%;
+	width: 90%;
 	margin: 1em auto;
 	img {
-		// @include border;
 		height: 100%;
 		width: 50%;
 		object-fit: scale-down;
-		// padding: 2rem 0rem 2rem 3rem;
 	}
 
 	form {
@@ -251,4 +250,7 @@ body {
 @import './popularTrips';
 @import './footer';
 
-@import './mobile';
+@import './large-screen';
+@import './desktop';
+@import './tablets';
+@import './smartphones';

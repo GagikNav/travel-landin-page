@@ -3,6 +3,7 @@ nav {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	height: auto;
+	max-height: 20vh;
 	width: 80%;
 	.logo {
 		justify-self: center;
@@ -40,6 +41,11 @@ nav {
 			height: 80%;
 			width: 80%;
 			padding: 0.4rem;
+		}
+		input:focus,
+		textarea:focus,
+		select:focus {
+			outline: none;
 		}
 	}
 

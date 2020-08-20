@@ -40,6 +40,7 @@ nav {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   height: auto;
+  max-height: 20vh;
   width: 80%;
 }
 
@@ -99,6 +100,12 @@ nav .search-input input {
   height: 80%;
   width: 80%;
   padding: 0.4rem;
+}
+
+nav .search-input input:focus,
+nav .search-input textarea:focus,
+nav .search-input select:focus {
+  outline: none;
 }
 
 nav ul {
@@ -289,10 +296,10 @@ nav ul li a:hover {
 }
 
 #main-hero div.a-tag:hover {
+  text-decoration: underline;
+  color: black;
   -webkit-transition: ease-in-out 0.25s;
   transition: ease-in-out 0.25s;
-  text-decoration: underline;
-  color: #d3d3d3;
 }
 
 #banner {
@@ -361,7 +368,7 @@ nav ul li a:hover {
 #banner div.text div.btn-black {
   cursor: pointer;
   display: block;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
   background: black;
   margin: auto;
@@ -408,7 +415,7 @@ nav ul li a:hover {
   height: 25vh;
   margin: 3rem auto;
   overflow: hidden;
-  width: 80%;
+  width: 90%;
 }
 
 .carousel-container .slide {
@@ -421,11 +428,19 @@ nav ul li a:hover {
 }
 
 .carousel-container .slide img {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  height: 17.5vh;
+  -o-object-fit: scale-contain;
+     object-fit: scale-contain;
+  height: 20vh;
   width: 300px;
-  padding: 2rem;
+  padding: 3rem 5rem;
+}
+
+.carousel-container .slide img:nth-of-type(6) {
+  padding: 1rem 4rem;
+}
+
+.carousel-container .slide img:nth-of-type(4) {
+  padding: 1.5rem 4rem;
 }
 
 .carousel-container::before, .carousel-container::after {
@@ -434,7 +449,7 @@ nav ul li a:hover {
   content: '';
   height: 100%;
   position: absolute;
-  width: 25%;
+  width: 20%;
   z-index: 1;
 }
 
@@ -460,16 +475,16 @@ nav ul li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background-color: #f9f2fa;
   opacity: 0.95;
   margin: 0;
   font-size: 1.2em;
   color: #555;
-  -webkit-box-shadow: 0px 0px 21px 0px #d7a8de;
-  box-shadow: 0px 0px 10px 1px #c684d0;
+  -webkit-box-shadow: 0px 0px 21px 0px #e0bbe5;
+  box-shadow: 0px 0px 10px 1px #e0bbe5;
   -webkit-transition: ease-in-out 0.25s;
   transition: ease-in-out 0.25s;
   z-index: 2;
@@ -509,7 +524,7 @@ div.btn-right {
       -ms-flex-pack: center;
           justify-content: center;
   height: 40vh;
-  width: 80%;
+  width: 90%;
   margin: 1em auto;
 }
 
@@ -726,7 +741,7 @@ div.btn-right {
 .popular-trips {
   position: relative;
   height: 60vh;
-  width: 80%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
 }
@@ -765,19 +780,19 @@ div.btn-right {
   display: -ms-flexbox;
   display: flex;
   height: 80%;
-  width: 300%;
+  width: 145rem;
 }
 
 .popular-trips .cards .card {
   border-radius: 5px;
-  width: 19em;
+  max-width: 15rem;
   height: 95%;
   padding: 0 0.6rem;
 }
 
 .popular-trips .cards .card.first-card {
   background: #edd8f0;
-  width: 15em;
+  max-width: 15em;
 }
 
 .popular-trips .cards .card .price {
@@ -914,7 +929,7 @@ div.btn-right {
 
 footer {
   background: #f1e0f3;
-  height: Uto;
+  height: auto;
   width: 100%;
 }
 
@@ -1058,59 +1073,586 @@ li {
   list-style-type: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 769px) and (max-width: 1170px) {
   nav {
-    overflow-x: hidden;
+    width: 95%;
   }
-  #main-hero {
-    height: 80vh;
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
+  nav ul li {
+    margin: 0 5px;
+    font-size: 0.9rem;
   }
-  #main-hero div.btn-black {
-    top: 60%;
-    right: 30%;
+  .search-input .search-icon {
+    font-size: 0.8rem;
+    width: 10%;
+    padding: 0 0.2rem;
   }
-  #main-hero div.btn-black:hover a.btn {
-    text-decoration: underline;
-  }
-  #main-hero img {
-    width: 100%;
-  }
-  #main-hero div.a-tag {
-    color: #e41d1d;
-    font-size: 1rem;
-    top: 70%;
-    right: 25%;
+  .search-input input {
+    font-size: 0.7rem;
   }
   #main-hero h1 {
-    height: 50px;
+    top: 25%;
+    right: 30%;
+    padding: 3rem;
+    font-size: 2.8rem;
+    margin: 0.4rem auto;
+  }
+  #main-hero div.btn-black {
+    border: #000 solid 1px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+    line-height: 1.4;
+    background: #fff;
+    margin: auto;
+    width: 11rem;
+    height: 2rem;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    -webkit-transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.25s;
+    top: 70%;
+    right: 48%;
+    position: absolute;
+    z-index: 5;
+    width: 10rem;
+    margin: 1rem;
+  }
+  #main-hero div.btn-black .btn {
+    z-index: 5;
+    color: #000;
+    font-size: 1rem;
+  }
+  #main-hero div.btn-black:hover {
+    background: #000;
+  }
+  #main-hero div.btn-black:hover .btn {
+    color: #fff;
+  }
+  #main-hero div.btn-black .btn {
+    font-size: 0.9rem;
+  }
+  #main-hero div.a-tag {
+    font-size: 0.9rem;
+    margin: 0.8rem 0.5rem;
+    top: 80%;
+    right: 47%;
+    width: 10rem;
+    height: 2rem;
+    -webkit-transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.25s;
+  }
+  #main-hero div.a-tag :hover {
+    text-decoration: underline;
+  }
+  #banner div.text h2,
+  #banner div.text h1 {
+    margin: 2rem auto;
     font-size: 2rem;
-    text-justify: distribute;
-    padding: 0 0 0 0px;
-    margin: 0 0;
-    top: 10%;
-    left: 10%;
-    width: 250px;
+    letter-spacing: 3px;
+    word-spacing: -2.9px;
+  }
+  #banner div.text p {
+    font-size: 1rem;
+    padding: 0 2rem;
+    text-indent: 1rem;
+  }
+  #banner div.text div.btn-black {
+    width: 9rem;
+  }
+  #banner div.text div.btn-black .btn {
+    font-size: 0.8rem;
+  }
+  #banner div.text .a-link {
+    font-size: 0.8rem;
+  }
+  .carousel-container .slide img {
+    padding: 2rem 5rem;
+  }
+  .carousel-container .slide img:nth-of-type(6) {
+    padding: 1rem 6rem;
+  }
+  .carousel-container .slide img:nth-of-type(4) {
+    padding: 1rem 6rem;
+  }
+  div.find-trip form div {
+    margin: 0.35rem auto;
+  }
+  div.find-trip form .sel-location .location {
+    height: 2.1rem;
+    font-size: 0.7rem;
+  }
+  div.find-trip form .sel-location .location-text {
+    font-family: 'Pangolin', cursive;
+    font-size: 1rem;
+  }
+  div.find-trip form .sel-month .month-text {
+    font-family: 'Pangolin', cursive;
+    font-size: 1rem;
+  }
+  div.find-trip form .sel-month .month {
+    height: 2.1rem;
+    font-size: 0.7rem;
+  }
+  div.find-trip form .sel-month .year {
+    font-size: 0.7rem;
+    height: 2.1rem;
+  }
+  div.find-trip form .sel-duration .sel-text {
+    font-family: 'Pangolin', cursive;
+    font-size: 1rem;
+  }
+  div.find-trip form .sel-duration .duration {
+    height: 2.1rem;
+    font-size: 0.7rem;
+    width: 50%;
+    margin: 0 0.5rem;
+  }
+  div.find-trip form .sel-duration button.btn-blue {
+    width: 50%;
+    margin-right: 1rem;
+    height: 2.1rem;
+  }
+  .popular-trips {
+    position: relative;
+  }
+  .popular-trips h3 {
+    margin: 0.5rem;
+  }
+  .popular-trips #extrip {
+    position: absolute;
+    right: 2%;
+    top: 0.5rem;
+    color: black;
+  }
+  .popular-trips #extrip i {
+    margin: 0 0.5rem;
+  }
+  .popular-trips .cards-btn-right {
+    right: 5%;
+    top: 50%;
+  }
+  .popular-trips .cards-btn-left {
+    left: 5%;
+    top: 50%;
+  }
+  .popular-trips .nav-arrow {
+    opacity: 0.95;
+  }
+  .popular-trips .cards {
+    height: 80%;
+    width: 250%;
+  }
+  .popular-trips .cards .card .price {
+    font-size: 0.8rem;
+  }
+  .popular-trips .cards .card img {
+    cursor: pointer;
+    border-radius: 5px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 60%;
+  }
+  .popular-trips .cards .card .rating i {
+    font-size: 1rem;
+  }
+  .popular-trips .cards .card .rating h6 {
+    font-size: 0.9rem;
+  }
+  .popular-trips .cards .card .rating p {
+    font-size: 0.65rem;
+  }
+  .popular-trips .cards .card .rating .stars {
+    font-size: 0.8rem;
+  }
+  .first-card .bnr h1 {
+    padding: 2.1rem 0.5rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'a b' 'a d';
+    width: 95%;
+  }
+  nav .logo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: a;
+  }
+  nav ul {
+    height: 50%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: b;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    padding-top: 1rem;
+  }
+  nav ul li {
+    margin: 0 5px;
+    font-size: 0.8rem;
+  }
+  nav .search-input {
+    height: 50%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: d;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  nav .search-input .search-icon {
+    font-size: 0.8rem;
+    width: 10%;
+    padding: 0 0.2rem;
+    margin: 0.2rem;
+  }
+  nav .search-input input {
+    font-size: 0.7rem;
+  }
+  #main-hero {
+    height: 50vh;
+  }
+  #main-hero h1 {
+    top: 25%;
+    right: 30%;
+    padding: 3rem;
+    font-size: 2rem;
+    margin: 0.4rem auto;
+  }
+  #main-hero div.btn-black {
+    border: #000 solid 1px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+    line-height: 1.4;
+    background: #fff;
+    margin: auto;
+    width: 11rem;
+    height: 2rem;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    -webkit-transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.25s;
+    top: 45%;
+    right: 48%;
+    position: absolute;
+    z-index: 5;
+    width: 10rem;
+    margin: 1rem;
+  }
+  #main-hero div.btn-black .btn {
+    z-index: 5;
+    color: #000;
+    font-size: 1rem;
+  }
+  #main-hero div.btn-black:hover {
+    background: #000;
+  }
+  #main-hero div.btn-black:hover .btn {
+    color: #fff;
+  }
+  #main-hero div.btn-black .btn {
+    font-size: 0.9rem;
+  }
+  #main-hero div.a-tag {
+    font-size: 0.9rem;
+    margin: 1.5rem 0.5rem;
+    top: 50%;
+    right: 47%;
+    width: 10rem;
+    height: 2rem;
+    -webkit-transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.25s;
+  }
+  #main-hero div.a-tag :hover {
+    text-decoration: underline;
   }
   #banner {
-    height: 150vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80vh;
+  }
+  #banner img {
+    height: 50%;
+    width: 100%;
+  }
+  #banner div.text {
+    height: 50%;
+    width: 90%;
+    padding: 0.3rem;
+    margin: 0.5rem;
+  }
+  #banner div.text h2,
+  #banner div.text h1 {
+    margin: 0.8rem auto;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    word-spacing: -2px;
+  }
+  #banner div.text p {
+    font-size: 0.8rem;
+    padding: 0 2rem;
+    text-indent: 1rem;
+  }
+  #banner div.text div.btn-black {
+    margin: 0.5rem 0rem 0 0;
+    width: 9rem;
+  }
+  #banner div.text div.btn-black .btn {
+    font-size: 0.8rem;
+  }
+  #banner div.text .a-link {
+    margin: 0.2rem 0rem 0 0;
+    font-size: 0.9rem;
+  }
+  .carousel-container .slide img {
+    padding: 2rem 5rem;
+  }
+  .carousel-container .slide img:nth-of-type(6) {
+    padding: 1.5rem 4.5rem;
+  }
+  .carousel-container .slide img:nth-of-type(4) {
+    padding: 1.5rem 4.5rem;
+  }
+  div.find-trip {
+    height: 30vh;
+    margin: 0.5rem auto;
+  }
+  div.find-trip img {
+    width: 40%;
+    height: 90%;
+  }
+  div.find-trip form div {
+    margin: 0.35rem auto;
+  }
+  div.find-trip form .sel-location .location {
+    height: 1.9rem;
+    font-size: 0.7rem;
+  }
+  div.find-trip form .sel-location .location-text {
+    font-family: 'Pangolin', cursive;
+    font-size: 0.8rem;
+  }
+  div.find-trip form .sel-month .month-text {
+    font-family: 'Pangolin', cursive;
+    font-size: 0.8rem;
+  }
+  div.find-trip form .sel-month .month {
+    height: 1.9rem;
+    font-size: 0.7rem;
+  }
+  div.find-trip form .sel-month .year {
+    font-size: 0.7rem;
+    height: 1.9rem;
+  }
+  div.find-trip form .sel-duration .sel-text {
+    font-family: 'Pangolin', cursive;
+    font-size: 0.8rem;
+  }
+  div.find-trip form .sel-duration .duration {
+    height: 1.9rem;
+    font-size: 0.7rem;
+    width: 50%;
+    margin: 0 0.5rem;
+  }
+  div.find-trip form .sel-duration button.btn-blue {
+    width: 50%;
+    margin-right: 1rem;
+    height: 1.9rem;
+    font-size: 0.7rem;
+  }
+  .popular-trips {
+    position: relative;
+  }
+  .popular-trips h3 {
+    margin: 0.5rem;
+  }
+  .popular-trips #extrip {
+    position: absolute;
+    right: 2%;
+    top: 0.5rem;
+    color: black;
+  }
+  .popular-trips #extrip i {
+    margin: 0 0.5rem;
+  }
+  .popular-trips .cards-btn-right {
+    right: 5%;
+    top: 50%;
+  }
+  .popular-trips .cards-btn-left {
+    left: 5%;
+    top: 50%;
+  }
+  .popular-trips .nav-arrow {
+    opacity: 0.95;
+  }
+  .popular-trips .cards {
+    height: 80%;
+    width: 250%;
+  }
+  .popular-trips .cards .card .price {
+    font-size: 0.8rem;
+  }
+  .popular-trips .cards .card img {
+    cursor: pointer;
+    border-radius: 5px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 60%;
+  }
+  .popular-trips .cards .card .rating i {
+    font-size: 1rem;
+  }
+  .popular-trips .cards .card .rating h6 {
+    font-size: 0.72rem;
+  }
+  .popular-trips .cards .card .rating p {
+    font-size: 0.65rem;
+  }
+  .popular-trips .cards .card .rating .stars {
+    font-size: 0.8rem;
+  }
+  .first-card .bnr {
+    height: 120px;
+    width: 120px;
+  }
+  .first-card .bnr h1 {
+    padding: 2rem;
+    font-size: 1.1rem;
+  }
+  .first-card .h3 {
+    font-size: 0.8rem;
+  }
+  .first-card #bnr-link {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'a b' 'a d';
+    width: 95%;
+  }
+  nav .logo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: a;
+    margin-left: 10px;
+  }
+  nav ul {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: b;
+    height: 50%;
+    padding-top: 0.4rem;
+    width: 12rem;
+    margin: 0.1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+  }
+  nav ul li {
+    margin: 0.3rem;
+    font-size: 0.8rem;
+  }
+  nav .search-input {
+    width: 10rem;
+    height: 50%;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: d;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  nav .search-input .search-icon {
+    font-size: 0.8rem;
+    width: 10%;
+    padding: 0 0.2rem;
+    margin: 0.2rem;
+  }
+  nav .search-input input {
+    font-size: 0.7rem;
+  }
+  #main-hero {
+    height: 50vh;
+  }
+  #main-hero h1 {
+    top: 25%;
+    right: 10%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+  }
+  #main-hero div.btn-black {
+    top: 45%;
+    right: 25%;
+    position: absolute;
+    width: 9rem;
+    margin: 0.8rem;
+  }
+  #main-hero div.btn-black .btn {
+    font-size: 0.8rem;
+  }
+  #main-hero div.a-tag {
+    margin: 1.5rem 0.5rem;
+    top: 50%;
+    right: 20%;
+    width: 9rem;
+    height: 2rem;
+    -webkit-transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.25s;
+  }
+  #main-hero div.a-tag :hover {
+    text-decoration: underline;
+  }
+  #banner {
+    height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   #banner img {
-    border: #000 solid 1px;
     padding: 0;
     height: 50%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   #banner div.text {
-    width: 90%;
+    width: 100%;
   }
   #banner div.text div.btn-black {
     margin: 2rem 0rem 0 0;
@@ -1118,12 +1660,27 @@ li {
   #banner div.text .a-link {
     margin: 1rem 0rem 0 0;
   }
+  .carousel-container {
+    width: 100%;
+  }
   .carousel-container .slide img {
-    padding: 1rem;
-    width: 120px;
+    width: 100px;
+    padding: 3rem 2rem;
+  }
+  .carousel-container .slide img:nth-of-type(2) {
+    padding: 3rem 1rem;
+  }
+  .carousel-container .slide img:nth-of-type(3) {
+    padding: 3rem 1rem;
+  }
+  .carousel-container .slide img:nth-of-type(4) {
+    padding: 2rem 1rem;
+  }
+  .carousel-container .slide img:nth-of-type(6) {
+    padding: 2rem 1rem;
   }
   .carousel-container::before, .carousel-container::after {
-    width: 2% -10px;
+    width: 0;
   }
   .nav-arrow {
     width: 1.5rem;
@@ -1131,8 +1688,8 @@ li {
   }
   .nav-arrow:hover {
     cursor: pointer;
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
   }
   div.btn-left {
     left: 10%;
@@ -1141,60 +1698,60 @@ li {
     right: 10%;
   }
   div.find-trip {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 80vh;
-    max-height: auto;
+    height: 60vh;
+    margin: 1rem auto;
   }
   div.find-trip img {
     width: 100%;
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
-    height: 40%;
+    height: 50%;
   }
-  div.find-trip form {
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    height: 60%;
-    margin: 0;
-    padding: 0.5rem;
+  div.find-trip form div {
+    margin: 0.2rem auto;
   }
-  div.find-trip form .select-menu-style {
-    font-size: 0.9rem;
-    padding: 0.5rem 1.4rem 0.5rem 1.2rem;
-    line-height: 1.5;
+  div.find-trip form .sel-location .location {
+    height: 1.9rem;
+    font-size: 0.7rem;
   }
-  div.find-trip form span {
-    margin: 0rem;
+  div.find-trip form .sel-location .location-text {
+    margin-left: 0rem;
+    padding-right: 0.5rem;
+    font-family: 'Pangolin', cursive;
+    font-size: 0.8rem;
   }
-  div.find-trip form select {
-    margin-bottom: 0.5rem;
+  div.find-trip form .sel-month .month-text {
+    font-family: 'Pangolin', cursive;
+    font-size: 0.8rem;
+    padding-right: 0.5rem;
+    margin-left: 0;
   }
-  div.find-trip form .location {
-    width: 58%;
+  div.find-trip form .sel-month .month {
+    height: 1.9rem;
+    font-size: 0.7rem;
   }
-  div.find-trip form .month {
-    width: 40%;
+  div.find-trip form .sel-month .year {
+    font-size: 0.7rem;
+    height: 1.9rem;
   }
-  div.find-trip form .year {
-    width: 21%;
+  div.find-trip form .sel-duration .sel-text {
+    font-family: 'Pangolin', cursive;
+    font-size: 0.8rem;
   }
-  div.find-trip form .duration {
-    width: 89%;
+  div.find-trip form .sel-duration .duration {
+    height: 1.9rem;
+    font-size: 0.7rem;
+    width: 50%;
+    margin: 0 0.5rem;
   }
-  div.find-trip form button.btn-blue {
-    line-height: 0.4;
-    font-size: 1.1rem;
-    padding: 0.4rem 1rem;
+  div.find-trip form .sel-duration button.btn-blue {
+    width: 50%;
+    margin-right: 1rem;
+    height: 1.9rem;
+    font-size: 0.7rem;
   }
   .popular-trips {
     width: 100%;
@@ -1218,10 +1775,10 @@ li {
   }
   .popular-trips .cards .card {
     padding: 2px;
-    width: 200px;
+    width: 10rem;
   }
   .popular-trips .cards .card.first-card {
-    width: 150px;
+    width: 10rem;
   }
   .popular-trips .cards .card img {
     -o-object-fit: scale-down, cover;
@@ -1240,6 +1797,80 @@ li {
     margin: 1rem 0.5rem;
     font-family: sans-serif;
     font-size: 0.7rem;
+  }
+  footer {
+    background: #f1e0f3;
+    height: auto;
+    width: 100%;
+  }
+  footer .branding {
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  footer .branding .logo {
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    margin-top: 10px;
+  }
+  footer .branding .icons {
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+    grid-auto-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+  footer .branding .icons i {
+    font-size: 1.5rem;
+    margin: auto;
+    padding: auto;
+  }
+  footer .branding .icons p.hide {
+    display: none;
+  }
+  footer .links {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+  footer .links ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  footer .links ul li {
+    font-size: 0.8rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  footer .links ul li ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  footer .links ul li ul li {
+    margin: 0.3rem 0;
+  }
+  footer .links ul li ul li a {
+    color: black;
+    text-decoration: none;
+  }
+  footer .links ul li ul li a:hover {
+    text-decoration: underline;
+  }
+  li {
+    list-style-type: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

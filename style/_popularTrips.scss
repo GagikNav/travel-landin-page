@@ -1,6 +1,6 @@
 //  Carousel Styling
 $container-height: 60vh;
-$container-width: 80%;
+$container-width: 90%;
 $container-blur-width: 40%;
 
 .popular-trips {
@@ -42,17 +42,17 @@ $container-blur-width: 40%;
 	.cards {
 		display: flex;
 		height: 80%;
-		width: 300%;
+		width: 145rem;
 
 		.card {
 			border-radius: 5px;
-			width: 19em;
+			max-width: 15rem;
 			height: 95%;
 			padding: 0 0.6rem;
 
 			&.first-card {
 				background: darken($primary, 7);
-				width: 15em;
+				max-width: 15em;
 			}
 			.price {
 				margin: 1rem;

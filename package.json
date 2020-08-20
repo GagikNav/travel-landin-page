@@ -1,17 +1,19 @@
 {
-  "name": "travel-landingpage",
-  "version": "1.0.0",
-  "description": "Covering travel landing page",
-  "main": "index.js",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "browserify": "^16.5.1",
-    "dotenv": "^8.2.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Gagik",
-  "license": "ISC"
+	"name": "travel-landingpage",
+	"version": "1.0.0",
+	"description": "Covering travel landing page",
+	"main": "index.js",
+	"dependencies": {
+		"axios": "^0.19.2",
+		"dotenv": "^8.2.0",
+		"jquery": "^3.5.1"
+	},
+	"devDependencies": {
+		"browserify": "^16.5.1"
+	},
+	"scripts": {
+		"build": "browserify ./dist/js/index.js -o ./dist/js/index-bundle.js"
+	},
+	"author": "Gagik",
+	"license": "ISC"
 }
