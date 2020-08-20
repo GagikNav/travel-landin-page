@@ -12,7 +12,6 @@
 }
 
 * a {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -249,7 +248,7 @@ nav ul li a:hover {
   margin: 1em auto;
 }
 
-#main-hero div.btn-black {
+#main-hero .btn-black {
   border: #000 solid 1px;
   border: none;
   cursor: pointer;
@@ -270,34 +269,38 @@ nav ul li a:hover {
   z-index: 5;
 }
 
-#main-hero div.btn-black .btn {
+#main-hero .btn-black .btn {
   z-index: 5;
   color: #000;
   font-size: 1rem;
 }
 
-#main-hero div.btn-black:hover {
+#main-hero .btn-black:hover {
   background: #000;
 }
 
-#main-hero div.btn-black:hover .btn {
+#main-hero .btn-black:hover .btn {
   color: #fff;
 }
 
-#main-hero div.a-tag {
-  color: #fff;
-  font-size: 1rem;
+#main-hero .a-tag {
   position: absolute;
   margin: 1em 0;
+  z-index: 5;
   top: 62%;
   right: 47%;
   width: 11rem;
   height: 2rem;
 }
 
-#main-hero div.a-tag:hover {
+#main-hero .a-tag a {
+  color: #fff;
+  font-size: 1rem;
+}
+
+#main-hero .a-tag a:hover {
   text-decoration: underline;
-  color: black;
+  color: black !important;
   -webkit-transition: ease-in-out 0.25s;
   transition: ease-in-out 0.25s;
 }
@@ -569,7 +572,6 @@ div.btn-right {
 }
 
 .find-trip form * a {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -1116,7 +1118,7 @@ li {
     position: absolute;
     z-index: 5;
     width: 10rem;
-    margin: 1rem;
+    margin: 0.5rem;
   }
   #main-hero div.btn-black .btn {
     z-index: 5;
@@ -1132,18 +1134,11 @@ li {
   #main-hero div.btn-black .btn {
     font-size: 0.9rem;
   }
-  #main-hero div.a-tag {
-    font-size: 0.9rem;
+  #main-hero .a-tag {
     margin: 0.8rem 0.5rem;
     top: 80%;
     right: 47%;
     width: 10rem;
-    height: 2rem;
-    -webkit-transition: ease-in-out 0.25s;
-    transition: ease-in-out 0.25s;
-  }
-  #main-hero div.a-tag :hover {
-    text-decoration: underline;
   }
   #banner div.text h2,
   #banner div.text h1 {

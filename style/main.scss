@@ -51,7 +51,7 @@ body {
 		color: white;
 		margin: 1em auto;
 	}
-	div.btn-black {
+	.btn-black {
 		@include white-btn;
 		top: 58%;
 		right: 48%;
@@ -59,20 +59,24 @@ body {
 		z-index: 5;
 	}
 
-	div.a-tag {
-		color: #fff;
-		font-size: 1rem;
+	.a-tag {
 		position: absolute;
 		margin: 1em 0;
+		z-index: 5;
+
 		top: 62%;
 		right: 47%;
 		width: 11rem;
 		height: 2rem;
+		a {
+			color: #fff;
+			font-size: 1rem;
 
-		&:hover {
-			text-decoration: underline;
-			color: black;
-			@include trans;
+			&:hover {
+				text-decoration: underline;
+				color: black !important;
+				@include trans;
+			}
 		}
 	}
 }
