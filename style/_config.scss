@@ -1,11 +1,11 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0px;
 
-	a {
-		text-decoration: none;
-	}
+  a {
+    text-decoration: none;
+  }
 }
 
 $primary: #f9f2fa;
@@ -20,126 +20,126 @@ $border: solid 1px black;
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 @mixin border {
-	border: #000 solid 1px;
+  border: #000 solid 1px;
 }
 
 @mixin boxShadow($d) {
-	box-shadow: 0 10px 20px -2px darken($primary, $d);
+  box-shadow: 0 10px 20px -2px darken($primary, $d);
 }
 
 @mixin flexbox {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 // gradient used in carousel
 @mixin white-gradient {
-	background: linear-gradient(to right, $primary 60%, #ffffff00 100%);
-}
-@mixin trans {
-	transition: ease-in-out $delay;
+  background: linear-gradient(to right, $primary 60%, #ffffff00 100%);
 }
 $delay: 0.25s;
+@mixin trans() {
+  transition: all ease-in-out $delay;
+}
 
 @mixin black-btn {
-	cursor: pointer;
-	display: block;
-	font-weight: 400;
-	line-height: 1.4;
-	background: black;
-	margin: auto;
-	width: 11rem;
-	height: 2rem;
-	padding: 0.25rem 1rem;
-	border-radius: 20px;
-	@include trans();
-	.btn {
-		color: #fff;
-		font-size: 1rem;
-	}
-	&:hover {
-		// @include boxShadow(35);
-		background: #fff;
-		.btn {
-			color: black;
-		}
-	}
+  cursor: pointer;
+  display: block;
+  font-weight: 400;
+  line-height: 1.4;
+  background: black;
+  margin: auto;
+  width: 11rem;
+  height: 2rem;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  @include trans();
+  .btn {
+    color: #fff;
+    font-size: 1rem;
+  }
+  &:hover {
+    // @include boxShadow(35);
+    background: #fff;
+    .btn {
+      color: black;
+    }
+  }
 }
 @mixin white-btn {
-	@include border;
-	border: none;
-	cursor: pointer;
-	display: block;
-	font-weight: 500;
-	line-height: 1.4;
-	background: #fff;
-	margin: auto;
-	width: 11rem;
-	height: 2rem;
-	padding: 0.25rem 1rem;
-	border-radius: 20px;
-	@include trans();
-	.btn {
-		z-index: 5;
-		color: #000;
-		font-size: 1rem;
-	}
-	&:hover {
-		// @include boxShadow(35);
-		background: #000;
-		.btn {
-			color: #fff;
-		}
-	}
+  @include border;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  line-height: 1.4;
+  background: #fff;
+  margin: auto;
+  width: 11rem;
+  height: 2rem;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  @include trans();
+  .btn {
+    z-index: 5;
+    color: #000;
+    font-size: 1rem;
+  }
+  &:hover {
+    // @include boxShadow(35);
+    background: #000;
+    .btn {
+      color: #fff;
+    }
+  }
 }
 
 // form variables
 $sel-hi: 2.5rem;
 @mixin form-font {
-	font-family: 'Pangolin', cursive;
-	font-size: 1.2rem;
+  font-family: 'Pangolin', cursive;
+  font-size: 1.2rem;
 }
 
 $lg-sel-hi: 2.1rem;
 @mixin lg-form-font {
-	font-family: 'Pangolin', cursive;
-	font-size: 1rem;
+  font-family: 'Pangolin', cursive;
+  font-size: 1rem;
 }
 $md-sel-hi: 1.9rem;
 @mixin md-form-font {
-	font-family: 'Pangolin', cursive;
-	font-size: 0.8rem;
+  font-family: 'Pangolin', cursive;
+  font-size: 0.8rem;
 }
 
 // nav-bar variables
 @mixin nav-font {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1rem;
-	font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 // media query
 
 @mixin mediaSm {
-	@media screen and (max-width: 500px) {
-		@content;
-	}
+  @media screen and (max-width: 500px) {
+    @content;
+  }
 }
 
 @mixin mediaMd {
-	@media screen and (max-width: 768px) {
-		@content;
-	}
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
 
 @mixin mediaLg {
-	@media screen and (min-width: 769px) and (max-width: 1170px) {
-		@content;
-	}
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
 }
 
 @mixin mediaXl {
-	@media screen and (min-width: 1171px) {
-		@content;
-	}
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
 }

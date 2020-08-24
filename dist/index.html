@@ -6,41 +6,50 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./css/main.css">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+         integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
    <title>Welcome</title>
 </head>
 
 <body>
-   <nav class="nav">
-      <div class="logo">
-         <a href="#"><img src="./img/logo.png" width="100px" height="100px" alt=""></a>
+   <header>
+      <div id="navBtn" class=" menu-btn show">
+         <div class="btn-line"></div>
+         <div class="btn-line"></div>
+         <div class="btn-line"></div>
       </div>
 
-      <div class="search-input">
-         <div class="search-icon"><i class="fas fa-search"></i>
+
+      <nav class="nav">
+
+         <div class="logo">
+            <a href="#"><img src="./img/logo.png" width="100px" height="100px" alt=""></a>
          </div>
-         <input type="search" name="query" placeholder="Search trips">
 
-      </div>
-      <ul class="nav">
-         <li class="nav-list">
-            <a href="">Trips</a>
-         </li>
-         <li class="nav-list">
-            <a href="">About</a>
-         </li>
-         <li class="nav-list">
-            <a href="">Deals</a>
-         </li>
-         <li class="nav-list">
-            <a href="">Login</a>
-         </li>
-         <li class="nav-list">
-            <a href="">Contact</a>
-         </li>
-      </ul>
-   </nav>
+         <div class="search-input">
+            <div class="search-icon"><i class="fas fa-search"></i>
+            </div>
+            <input type="search" name="query" placeholder="Search trips">
+         </div>
 
+         <ul class="nav-items hide-navbar sm-screen">
+            <li class="nav-list">
+               <a href="">Trips</a>
+            </li>
+            <li class="nav-list">
+               <a href="">About</a>
+            </li>
+            <li class="nav-list">
+               <a href="">Deals</a>
+            </li>
+            <li class="nav-list">
+               <a href="">Login</a>
+            </li>
+            <li class="nav-list">
+               <a href="">Contact</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
 
    <div id="main-hero" class="main-hero">
       <img src="./img/church-2020258_1280.jpg" alt="Santorini" class="hero-image">
@@ -55,7 +64,7 @@
       </div>
 
    </div>
-   </div>
+
 
    <div id="banner" class="banner">
       <img src="./img/mateus-campos-felipe-MiuoWyksY_Y-unsplash.jpg" alt="tow women standing and laughing">
@@ -74,31 +83,29 @@
 
       </div>
    </div>
-   <div class="carousel-container partners">
+
+   <div class="carousel-container partners ">
+      <div class="glide">
+         <div class="slide glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+               <li><img src="./img/as-featured-in.webp" alt="" class="brand glide__slide"></li>
+               <li><img src="./img/buzzfeed.webp" alt="" class="brand glide__slide"></li>
+               <li><img src="./img/condenast.webp" alt="" class="brand glide__slide"></li>
+               <li><img src="./img/refinery29.webp" alt="" class="brand glide__slide"></li>
+               <li><img src="./img/elitedaily.webp" alt="" class="brand glide__slide"></li>
+               <li><img src="./img/newyorktimes.webp" alt="" class="brand glide__slide"></li>
+               <li><img src="./img/travelandleisure.webp" alt="" class="brand glide__slide"></li>
+            </ul>
+         </div>
+         <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i
+                  class="fas fa-angle-left"></i></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i
+                  class="fas fa-angle-right"></i></button>
+         </div>
 
 
-      <div class="slide">
-         <!-- these tow image will add when we are using infinite carousel  -->
-
-         <!-- <img src="./img/as-featured-in.webp" alt="" class="brand" id="lastClone"> -->
-
-         <img src="./img/as-featured-in.webp" alt="" class="brand">
-         <img src="./img/buzzfeed.webp" alt="" class="brand">
-         <img src="./img/condenast.webp" alt="" class="brand">
-         <img src="./img/refinery29.webp" alt="" class="brand">
-         <img src="./img/elitedaily.webp" alt="" class="brand">
-         <img src="./img/newyorktimes.webp" alt="" class="brand">
-         <img src="./img/travelandleisure.webp" alt="" class="brand">
-         <img src="./img/as-featured-in.webp" alt="" class="brand">
-
-
-         <!-- <img src="./img/buzzfeed.webp" alt="" class="brand" id="firstClone"> -->
       </div>
-      <div class="btn-left nav-arrow hidden " id="prevBtn"><i class="fas fa-angle-left"></i></div>
-      <div class="btn-right nav-arrow " id="nextBtn"><i class="fas fa-angle-right"></i></div>
-   </div>
-
-
    </div>
 
 
@@ -373,8 +380,11 @@
    </footer>
 
 
-
+   <script src="../node_modules/@glidejs/glide/dist/glide.min.js"></script>
    <script src="./js/index-bundle.js" type="module"></script>
+
+
+
 </body>
 
 </html>
