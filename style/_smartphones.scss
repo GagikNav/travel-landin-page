@@ -55,11 +55,12 @@ body {
     }
     div.text {
       width: 100%;
+      font-size: 0.9rem;
       div.btn-black {
-        margin: 2rem 0rem 0 0;
+        margin: 2rem 0.5rem 0 0;
       }
       .a-link {
-        margin: 1rem 0rem 0 0;
+        margin: 1rem 0.5rem 0 0;
       }
     }
   }
@@ -67,7 +68,7 @@ body {
   // Partners
 
   .carousel-container {
-    margin-top: 1rem;
+    margin: 0.5rem 0;
 
     width: 100%;
     overflow-x: scroll;
@@ -89,12 +90,7 @@ body {
         width: 250px;
 
         padding: 3rem 2rem;
-        // &:nth-of-type(2) {
-        // 	padding: 3rem 1rem;
-        // }
-        // &:nth-of-type(3) {
-        // 	padding: 3rem 1rem;
-        // }
+
         &:nth-of-type(4) {
           padding: 2rem 2rem;
         }

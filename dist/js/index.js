@@ -26,12 +26,26 @@ const config = {
 new Glide('.glide', config).mount();
 
 //
-
 $('#navBtn').click(function () {
+  $('#navBtn').toggleClass('close');
   $('ul').toggleClass('hide-navbar');
-  $(this).toggleClass('close');
+  $('.blocker').toggleClass('on');
+});
+//
+// closing Menu  with outside click
+//  div with class of blocker added in order to maintain outside click event
+// when the menu is open
+$('.blocker').click(() => {
+  if ($('#navBtn').hasClass('close')) {
+    toggleMenu();
+    $('.blocker').toggleClass('on');
+  }
 });
 
+function toggleMenu() {
+  $('#navBtn').toggleClass('close');
+  $('ul').toggleClass('hide-navbar');
+}
 //get data from OpenWeather API Function
 //
 

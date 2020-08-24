@@ -1,3 +1,6 @@
 // large screen
 @include mediaXl {
+  #navBtn {
+    display: none;
+  }
 }

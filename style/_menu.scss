@@ -4,9 +4,22 @@
   width: 25px;
   margin: 0 0 5px 0;
 }
+
+.blocker {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 5;
+  &.on {
+    display: none;
+  }
+}
+
 .menu-btn {
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   top: 35px;
   right: 35px;
   cursor: pointer;
