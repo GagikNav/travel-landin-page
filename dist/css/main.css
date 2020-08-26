@@ -833,6 +833,7 @@ nav ul li a:hover {
 }
 
 .find-trip {
+  background: rgba(241, 224, 243, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2372,7 +2373,7 @@ body {
     text-decoration: underline;
   }
   #banner {
-    height: 60vh;
+    height: 65vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2390,10 +2391,10 @@ body {
     font-size: 0.9rem;
   }
   #banner div.text div.btn-black {
-    margin: 2rem 0.5rem 0 0;
+    margin: 1rem 0.3rem 0 0;
   }
   #banner div.text .a-link {
-    margin: 1rem 0.5rem 0 0;
+    margin: 0.3rem 0.5rem 0 0;
   }
   .nav-arrow {
     width: 1.5rem;

@@ -158,6 +158,8 @@ body {
 @import './_partners';
 
 .find-trip {
+  background: rgba(darken($primary, 5), 0.5);
+
   display: flex;
   position: relative;
   align-items: center;
