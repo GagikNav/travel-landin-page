@@ -2557,6 +2557,9 @@ body {
     margin: 0.5rem;
     font-size: 0.6rem;
   }
+  .cards .card .rating i {
+    font-size: 1.2rem;
+  }
   .cards .card .rating h6 {
     margin: 0.2rem;
     font-size: 1rem;
