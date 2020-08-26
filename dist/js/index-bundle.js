@@ -33,10 +33,14 @@ const Swiper = require('../../node_modules/swiper/swiper-bundle');
 
 const mySwiper = new Swiper(' #partner', {
 	roundLengths: true,
+
 	// Navigation arrows
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
+	},
+	autoplay: {
+		delay: 5000,
 	},
 	direction: 'horizontal',
 	slidesPerView: '4',
@@ -64,9 +68,14 @@ const mySwiper = new Swiper(' #partner', {
 
 const mySwiper1 = new Swiper('#pop-trip-cards', {
 	direction: 'horizontal',
+	roundLengths: true,
+	centerInsufficientSlides: true,
 	loop: false,
 	slidesPerView: 4,
 	spaceBetween: 20,
+	setWrapperSize: true,
+	watchOverflow: true,
+
 	breakpoints: {
 		1024: {
 			slidesPerView: 3,
@@ -81,12 +90,15 @@ const mySwiper1 = new Swiper('#pop-trip-cards', {
 			spaceBetween: 5,
 		},
 	},
+
 	grabCursor: true,
+
 	// Navigation arrows
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets',
