@@ -1,37 +1,85 @@
-.nav-arrow {
-	@include flexbox;
-	width: 2.5rem;
-	height: 2.5rem;
-	border-radius: 50%;
-	background-color: $primary;
-	opacity: 0.95;
-	margin: 0;
-	font-size: 1.2em;
-	color: #555;
-	-webkit-box-shadow: 0px 0px 21px 0px darken($primary, 15);
-	box-shadow: 0px 0px 10px 1px darken($primary, 15);
-	// transition: transform 0.1s;
-	@include trans;
-	z-index: 2;
+:root {
+  --swiper-navigation-size: 44px;
+  /*
+  --swiper-navigation-color: var(--swiper-theme-color);
+  */
+}
+.swiper-button-prev,
+.swiper-button-next {
+  @include trans;
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  z-index: 5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  &:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+  }
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: $primary 2px solid;
+  background: darken($primary, 5);
+  opacity: 0.9;
+  &:hover {
+    border: $primary 3px solid;
+    opacity: 0.7;
+    background: darken($primary, 8);
+    transform: scale(1.05);
+    @include boxShadow(20);
+  }
 
-	&:hover {
-		cursor: pointer;
-		transform: scale(1.2);
-	}
+  &.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+    pointer-events: none;
+  }
+  i {
+    font-size: 1.2rem;
+  }
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  &:after {
+    content: '';
+  }
+  left: 10px;
+  right: 500px;
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  &:after {
+    content: '';
+  }
+  right: 10px;
+  left: auto;
 }
 
-div.btn-left {
-	position: absolute;
-	left: 5%;
-	top: $container-height/2.5;
+@each $navColorName, $navColorValue in $colors {
+  .swiper-button-prev,
+  .swiper-button-next {
+    &.swiper-button-#{$navColorName} {
+      --swiper-navigation-color: #{$navColorValue};
+    }
+  }
 }
-
-div.btn-right {
-	position: absolute;
-	right: 5%;
-	top: $container-height/2.5;
-}
-
-.hidden {
-	display: none;
+.swiper-button-lock {
+  display: none;
 }

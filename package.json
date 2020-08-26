@@ -4,10 +4,10 @@
   "description": "Covering travel landing page",
   "main": "index.js",
   "dependencies": {
-    "@glidejs/glide": "^3.4.1",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "swiper": "^6.1.2"
   },
   "devDependencies": {
     "browserify": "^16.5.1",

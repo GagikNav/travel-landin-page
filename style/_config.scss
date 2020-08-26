@@ -7,6 +7,11 @@
     text-decoration: none;
   }
 }
+$themeColor: #444 !default;
+$colors: (
+  'white': #ffffff,
+  'black': #000000,
+) !default;
 
 $primary: #f9f2fa;
 $marg: 0.5rem;
@@ -143,3 +148,4 @@ $md-sel-hi: 1.9rem;
     @content;
   }
 }
+@import '../node_modules/swiper/swiper.scss';

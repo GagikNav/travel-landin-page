@@ -131,20 +131,6 @@
 
   //  Partners Tablets
 
-  .carousel-container {
-    .slide {
-      img {
-        padding: 2rem 5rem;
-        &:nth-of-type(6) {
-          padding: 1.5rem 4.5rem;
-        }
-        &:nth-of-type(4) {
-          padding: 1.5rem 4.5rem;
-        }
-      }
-    }
-  }
-
   // Form Tablets
 
   div.find-trip {
@@ -210,7 +196,7 @@
     h3 {
       margin: 0.5rem;
     }
-    #extrip {
+    #explore-trip {
       position: absolute;
       right: 2%;
       top: 0.5rem;
@@ -219,72 +205,55 @@
         margin: 0 0.5rem;
       }
     }
+  }
+  .pop-trip-cards {
+    height: 40vh;
+    .card {
+      .price {
+        font-size: 0.8rem;
+      }
+      img {
+        cursor: pointer;
+        border-radius: 5px;
+        object-fit: cover;
+        width: 100%;
+        height: 60%;
+      }
 
-    // buttons desktop
+      // Rating and favorite section
 
-    .cards-btn-right {
-      right: 5%;
-      top: 50%;
-    }
-    .cards-btn-left {
-      left: 5%;
-      top: 50%;
-    }
-    .nav-arrow {
-      opacity: 0.95;
-    }
-
-    .cards {
-      height: 80%;
-      width: 250%;
-
-      .card {
-        .price {
+      .rating {
+        i {
+          font-size: 1rem;
+        }
+        h6 {
+          font-size: 0.72rem;
+        }
+        p {
+          font-size: 0.65rem;
+        }
+        .stars {
           font-size: 0.8rem;
         }
-        img {
-          cursor: pointer;
-          border-radius: 5px;
-          object-fit: cover;
-          width: 100%;
-          height: 60%;
+      }
+    }
+    .first-card {
+      .bnr {
+        height: 120px;
+        width: 120px;
+        h1 {
+          padding: 2rem;
+          font-size: 1.1rem;
         }
-
-        // Rating and favorite section
-
-        .rating {
-          i {
-            font-size: 1rem;
-          }
-          h6 {
-            font-size: 0.72rem;
-          }
-          p {
-            font-size: 0.65rem;
-          }
-          .stars {
-            font-size: 0.8rem;
-          }
-        }
+      }
+      .h3 {
+        font-size: 0.8rem;
+      }
+      #bnr-link {
+        font-size: 0.7rem;
       }
     }
   }
-  .first-card {
-    .bnr {
-      height: 120px;
-      width: 120px;
-      h1 {
-        padding: 2rem;
-        font-size: 1.1rem;
-      }
-    }
-    .h3 {
-      font-size: 0.8rem;
-    }
-    #bnr-link {
-      font-size: 0.7rem;
-    }
-  }
-
-  //$ End fo Tablets
 }
+
+//$ End fo Tablets
