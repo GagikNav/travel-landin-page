@@ -1617,7 +1617,6 @@ button.swiper-pagination-bullet {
 }
 
 .pop-trip-cards .card img {
-  cursor: pointer;
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
