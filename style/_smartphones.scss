@@ -6,13 +6,37 @@ body {
 @include mediaSm {
   nav {
     .logo {
+      justify-self: start;
+      margin: 2px 2px 2px 6px;
       img {
-        height: 80px;
-        width: 80px;
+        height: 70px;
+        width: 70px;
       }
     }
+    .search-input {
+      .search-icon {
+        width: 20%;
+      }
+      height: 40%;
+      width: 100%;
+      margin: 2px 0;
+      input {
+        height: 80%;
+        width: 100%;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+      }
+      min-width: 180px;
+    }
+    // menu Btn
   }
-
+  .menu-btn {
+    top: 28px;
+    right: 7px;
+  }
   #main-hero {
     height: 50vh;
 
@@ -116,10 +140,12 @@ body {
         .location {
           height: $md-sel-hi;
           font-size: 0.7rem;
+          margin: 0 4.5rem 0rem 1.2rem;
+          width: 60%;
         }
         .location-text {
           margin-left: 0rem;
-          padding-right: 0.5rem;
+          padding-right: 0rem;
           @include md-form-font;
         }
       }
