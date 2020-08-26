@@ -5,6 +5,12 @@ body {
 // Smartphone
 @include mediaSm {
   nav {
+    .logo {
+      img {
+        height: 80px;
+        width: 80px;
+      }
+    }
   }
 
   #main-hero {

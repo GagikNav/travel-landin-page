@@ -232,6 +232,12 @@ nav .logo {
 }
 
 nav .logo img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100px;
   width: 100px;
 }
@@ -2339,6 +2345,10 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  nav .logo img {
+    height: 80px;
+    width: 80px;
+  }
   #main-hero {
     height: 50vh;
   }
