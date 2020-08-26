@@ -25,6 +25,10 @@ function toggleMenu() {
 	$('ul').toggleClass('hide-navbar');
 }
 
+$('.fa-heart').click(function () {
+	$(this).toggleClass('fav');
+});
+
 //
 // Swiper Carousel
 const Swiper = require('../../node_modules/swiper/swiper-bundle');
